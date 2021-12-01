@@ -11,6 +11,11 @@ const connect = function () {
     // code that does something when the connection is first established
     console.log("Connected");
     conn.write("Name: rc6")
+    //conn.write("Move: up")
+    setTimeout(() => {
+      conn.write("Move: up");
+    }, 50);
+
   });
 
   conn.on("data", (message) => {
@@ -24,4 +29,4 @@ const connect = function () {
   return conn;
 };
 
-module.exports = connect;
+module.exports = { connect }; 
