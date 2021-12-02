@@ -5,4 +5,4 @@ connect();
 // setup interface to handle user input from stdin
 
 
-setupInput();
+setupInput(connect());
