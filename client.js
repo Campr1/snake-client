@@ -18,10 +18,12 @@ const connect = function () {
 
   });
 
+
   conn.on("data", (message) => {
     // code that does something when the connection is first established
     console.log("Server sent: ", message);
   });
+
 
   // interpret incoming data as text
   conn.setEncoding("utf8");
